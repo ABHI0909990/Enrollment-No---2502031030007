@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neth BookPoint | Checkout</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="checkout-content" class="container py-16">
+      <div class="flex items-center justify-between mb-12">
+        <div>
+          <h2 class="text-4xl font-bold">Checkout Details</h2>
+          <div
+            style="
+              height: 6px;
+              width: 6rem;
+              background: var(--gold);
+              border-radius: 999px;
+              margin-top: 0.5rem;
+            "
+          ></div>
+        </div>
+        <a
+          href="cart.html"
+          class="text-gray"
+          style="padding: 0.5rem; transition: color 0.3s"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </a>
+      </div>
+
+      <form id="checkout-form" class="grid grid-cols-2 gap-16">
+        <div class="flex flex-col gap-8">
+          <div
+            class="bg-white p-10 rounded-3xl shadow-lg border border-gray-light"
+          >
+            <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-gold"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <span>Receiver Information</span>
+            </h3>
+            <div class="flex flex-col gap-6">
+              <div class="form-group">
+                <label class="form-label">Receiver Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter name"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Contact Number</label>
+                <input
+                  type="text"
+                  placeholder="Enter number"
+                  class="form-input"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-white p-10 rounded-3xl shadow-lg border border-gray-light"
+          >
+            <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-gold"
+              >
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Delivery Address</span>
+            </h3>
+            <div class="flex flex-col gap-6">
+              <div class="form-group">
+                <label class="form-label">Sending Address</label>
+                <input
+                  type="text"
+                  placeholder="Enter address"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="grid grid-cols-2 gap-6">
+                <div class="form-group">
+                  <label class="form-label">Province</label>
+                  <select class="form-input" required>
+                    <option value="">Select Province</option>
+                    <option>Western</option>
+                    <option>Central</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">City</label>
+                  <input
+                    type="text"
+                    placeholder="Enter city"
+                    class="form-input"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-summary h-fit">
+          <h3 class="text-2xl font-bold text-gold mb-8 flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="20" height="14" x="2" y="5" rx="2" />
+              <line x1="2" x2="22" y1="10" y2="10" />
+            </svg>
+            <span>Payment Details</span>
+          </h3>
+          <div class="flex flex-col gap-6 mb-8">
+            <div class="form-group">
+              <label class="form-label" style="color: var(--gray-light)"
+                >Card Number</label
+              >
+              <input
+                type="text"
+                placeholder="0000 0000 0000 0000"
+                class="form-input"
+                style="
+                  background: rgba(255, 255, 255, 0.1);
+                  color: white;
+                  border-color: rgba(255, 255, 255, 0.2);
+                "
+                required
+              />
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="form-group">
+                <label class="form-label" style="color: var(--gray-light)"
+                  >Expiry Date</label
+                >
+                <input
+                  type="text"
+                  placeholder="MM/YY"
+                  class="form-input"
+                  style="
+                    background: rgba(255, 255, 255, 0.1);
+                    color: white;
+                    border-color: rgba(255, 255, 255, 0.2);
+                  "
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" style="color: var(--gray-light)"
+                  >CVV</label
+                >
+                <input
+                  type="password"
+                  placeholder="***"
+                  class="form-input"
+                  style="
+                    background: rgba(255, 255, 255, 0.1);
+                    color: white;
+                    border-color: rgba(255, 255, 255, 0.2);
+                  "
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              border-top: 1px solid rgba(255, 255, 255, 0.1);
+              padding-top: 2rem;
+            "
+          >
+            <div class="flex justify-between items-end mb-8">
+              <span
+                class="text-sm uppercase tracking-widest"
+                style="color: var(--gray-light)"
+                >Amount to Pay</span
+              >
+              <span id="checkout-total" class="text-4xl font-bold"
+                >Rs. 0.00</span
+              >
+            </div>
+            <button
+              type="submit"
+              class="btn btn-gold w-full"
+              style="
+                justify-content: center;
+                padding: 1.25rem;
+                font-size: 1.25rem;
+              "
+            >
+              Pay Now
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <base href="../../" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neth BookPoint | Book Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar sticky top-0 z-50">
+      <div
+        class="nav-top"
+        style="background-image: url(&quot;assets/bookstore/logo.png&quot;)"
+      >
+        <div class="flex items-center gap-4">
+          <a
+            href="pages/HomePage/home.html"
+            class="flex items-center gap-4"
+            style="text-decoration: none"
+          >
+            <img
+              src="assets/bookstore/nav-bg.png"
+              alt="Logo"
+              style="height: 4rem; width: 4rem; object-fit: contain"
+            />
+            <h1 class="text-gold" style="font-size: 1.5rem; line-height: 1.2">
+              NETH<br />BOOKPOINT
+            </h1>
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="pages/HomePage/home.html">Home</a>
+          <a href="pages/AboutPage/about.html">About</a>
+          <a href="pages/ShopPage/shop.html">Shop</a>
+        </div>
+        <div class="nav-actions">
+          <a
+            href="pages/LoginPage/login.html"
+            class="btn btn-gold"
+            style="padding: 0.5rem 1rem"
+          >
+            Login
+          </a>
+          <a
+            href="pages/ShopPage/cart.html"
+            class="text-white relative"
+            style="display: flex; align-items: center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="8" cy="21" r="1" />
+              <circle cx="19" cy="21" r="1" />
+              <path
+                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+              />
+            </svg>
+            <span id="cart-badge" class="cart-badge" style="display: none"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-16">
+      <a
+        href="pages/ShopPage/shop.html"
+        class="flex items-center gap-2 text-gray font-bold mb-12"
+        style="text-decoration: none; transition: color 0.3s"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m12 19-7-7 7-7" />
+          <path d="M19 12H5" />
+        </svg>
+        <span>Back to Shop</span>
+      </a>
+
+      <div id="book-details"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
