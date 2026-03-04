@@ -1,6 +1,4 @@
-// Bookstore Core Logic
 const Bookstore = {
-  // Mock Data
   books: [
     {
       id: "1",
@@ -62,7 +60,6 @@ const Bookstore = {
     },
   ],
 
-  // Cart Management
   cart: {
     items: JSON.parse(localStorage.getItem("bookstore_cart")) || [],
 
@@ -162,7 +159,6 @@ const Bookstore = {
     },
   },
 
-  // Auth Management
   auth: {
     user: JSON.parse(localStorage.getItem("bookstore_user")) || null,
 
@@ -206,7 +202,6 @@ const Bookstore = {
     },
   },
 
-  // Page Specific Logic
   pages: {
     book() {
       const params = new URLSearchParams(window.location.search);
